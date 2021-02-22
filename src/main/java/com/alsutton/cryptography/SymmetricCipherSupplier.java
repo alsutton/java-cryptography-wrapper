@@ -1,4 +1,4 @@
-package com.enterprisepasswordsafe.cryptography;
+package com.alsutton.cryptography;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
@@ -8,7 +8,6 @@ import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.security.SecureRandom;
 
 public class SymmetricCipherSupplier implements CipherSupplier {
 

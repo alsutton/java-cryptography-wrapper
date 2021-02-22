@@ -1,8 +1,7 @@
-package com.enterprisepasswordsafe.cryptography;
+package com.alsutton.cryptography;
 
 import javax.crypto.Cipher;
 import java.security.Key;
-import java.util.function.Supplier;
 
 public abstract class SingleRoundDecrypter extends SingleRoundCryptographyFunction implements Decrypter {
     SingleRoundDecrypter(CipherSupplier cipherSupplier, Key key) {

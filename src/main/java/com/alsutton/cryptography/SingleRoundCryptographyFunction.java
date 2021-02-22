@@ -1,9 +1,8 @@
-package com.enterprisepasswordsafe.cryptography;
+package com.alsutton.cryptography;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
-import java.security.InvalidKeyException;
 import java.security.Key;
 
 public abstract class SingleRoundCryptographyFunction {

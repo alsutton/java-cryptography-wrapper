@@ -1,4 +1,4 @@
-package com.enterprisepasswordsafe.cryptography;
+package com.alsutton.cryptography;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 

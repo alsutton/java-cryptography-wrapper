@@ -1,4 +1,4 @@
-package com.enterprisepasswordsafe.cryptography;
+package com.alsutton.cryptography;
 
 import javax.crypto.Cipher;
 import java.security.Key;
