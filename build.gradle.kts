@@ -16,6 +16,7 @@ plugins {
     java
     id("net.ltgt.errorprone") version "1.3.0"
     id("com.github.ben-manes.versions") version "0.36.0"
+    `maven-publish`
     jacoco
 }
 
@@ -33,6 +34,30 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
     errorprone("com.google.errorprone:error_prone_core:2.5.1")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.alsutton"
+            artifactId = "java-cryptography-wrapper"
+            version = "1.0"
+
+            from(components["java"])
+
+            pom {
+                name.set("Java Cryptography Wrapper")
+                description.set("Wrapper to provide a simple API to the Java Cryptography APIs")
+                url.set("https://github.com/alsutton/java-cryptography-wrapper")
+                licenses {
+                    license {
+                        name.set("Creative Commons CC0 Universal, Version 1.0")
+                        url.set("https://github.com/alsutton/java-cryptography-wrapper/blob/main/LICENSE")
+                    }
+                }
+            }
+        }
+    }
 }
 
 tasks.withType<JavaCompile>().configureEach {
