@@ -14,3 +14,21 @@ I offer no guarantees around the eternal security of the methods used, but they
 form the basis of how the [Enterprise Passowrd Safe](https://github.com/alsutton/enterprisepasswordsafe)
 works which has been in use by companies and government organisations for
 over 15 years.
+
+## Published Artifact
+
+The versions of this library are published on my maven repository, to
+reference them in a Gradle build you will need to add the following to the
+`repositories` block for your build;
+
+```kotlin
+    maven {
+        url = uri("http://maven.alsutton.com/")
+    }
+```
+
+Then you can add the dependency like this;
+
+```kotlin
+    implementation("com.alsutton:java-cryptography-wrapper:1.0")
+```
