@@ -1,34 +1,1 @@
-# java-cryptography-wrapper
-
-This is a small library to simplify the API into the Java cryptography routines. 
-It's designed to minimise the knowledge needed of the Java API, so you can 
-implement encryption and decryption with a few API calls.
-
-There are some unit tests which provide examples of how to use the API provided. 
-If you want to use this library for Public/Private key encryption (Asymmetric Encryption),
-I would recommend using the [Two Level Encryption](https://github.com/alsutton/java-cryptography-wrapper/blob/main/src/test/java/com/enterprisepasswordsafe/cryptography/EncryptionRoundTripTests.java#L49)
-method provided which encrypts the data with a unique symmetric key and then encrypts that
-key using the private key of the key pair.
-
-I offer no guarantees around the eternal security of the methods used, but they
-form the basis of how the [Enterprise Password Safe](https://github.com/alsutton/enterprisepasswordsafe)
-works which has been in use by companies and government organisations for
-over 15 years.
-
-## Published Artifact
-
-The versions of this library are published on my maven repository, to
-reference them in a Gradle build you will need to add the following to the
-`repositories` block for your build;
-
-```kotlin
-    maven {
-        url = uri("http://maven.alsutton.com/")
-    }
-```
-
-Then you can add the dependency like this;
-
-```kotlin
-    implementation("com.alsutton:java-cryptography-wrapper:1.0")
-```
+# java-cryptography-wrapperThis is a small library to simplify the API into the Java cryptography routines. It's designed to minimise the knowledge needed of the Java API, so you can implement encryption and decryption with a few API calls.There are some unit tests which provide examples of how to use the API provided. If you want to use this library for Public/Private key encryption (Asymmetric Encryption),I would recommend using the [Two Level Encryption](https://github.com/alsutton/java-cryptography-wrapper/blob/main/src/test/java/com/enterprisepasswordsafe/cryptography/EncryptionRoundTripTests.java#L49)method provided which encrypts the data with a unique symmetric key and then encrypts thatkey using the private key of the key pair.I offer no guarantees around the eternal security of the methods used, but theyform the basis of how the [Enterprise Password Safe](https://github.com/alsutton/enterprisepasswordsafe)works which has been in use by companies and government organisations forover 15 years.## Published ArtifactThe versions of this library are published on my maven repository, toreference them in a Gradle build you will need to add the following to the`repositories` block for your build;```kotlin    maven {        url = uri("http://maven.alsutton.com/")        content {          includeGroup "alsutton.com"        }    }```Then you can add the dependency like this;```kotlin    implementation("com.alsutton:java-cryptography-wrapper:1.0")```
